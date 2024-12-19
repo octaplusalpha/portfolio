@@ -1,0 +1,231 @@
+:root {
+  --azul: #246eb9ff;
+  --jet: #2c302eff;
+  --apple-green: #8fb339ff;
+  --timberwolf: #dbd4d3ff;
+  --ghost-white: #fbf9ffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main-wrapper {
+  display: grid;
+  grid-template-areas:
+    "H    H   H   H   H   H"
+    "W    W   W   W   W   W"
+    "SH   SH  SH  SH  SH  SH"
+    "p    p   p   p   p   p"
+    "p    p   p   p   p   p"
+    "M    M   M   M   M   M"
+    "AM   AM  AM  AM  AM  AM"
+    "CM   CM  CM  CM  CM  CM"
+    "F    F   F   F   F   F";
+}
+/* -------NAVBAR STYLES------- */
+.navbar-container {
+  grid-area: H;
+  background-color: var(--jet);
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar-container ul {
+  display: flex;
+  list-style: none;
+  gap: 100px;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  margin-right: 50px;
+}
+
+.navbar-container ul li a {
+  color: var(--ghost-white);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.navbar-container ul li a:hover {
+  color: var(--apple-green);
+  border-bottom: 3px solid yellow;
+  transition-duration: 0.4s;
+}
+/* -------WELCOME SECTION STYLES------- */
+#welcome-section {
+  grid-area: W;
+  background: no-repeat url("resources/image.png");
+  height: 100vh;
+  background-size: cover;
+}
+.welcome-header {
+  position: absolute;
+  top: 300px;
+  left: 800px;
+  font-size: 5rem;
+  color: var(--ghost-white);
+}
+.welcome-header span {
+  color: var(--apple-green);
+  font-size: 8rem;
+  display: block;
+}
+/* -------PROJECT HEADER STYLES------- */
+#project-header {
+  grid-area: SH;
+  text-align: center;
+  font-size: 4rem;
+  margin: 20px 0 100px 0;
+}
+/* -------PROJECT CONTAINER STYLES------- */
+.project-images {
+  width: 700px;
+  max-height: 800px;
+  height: 100%;
+}
+.project-container {
+  grid-area: P;
+  /* background-color: var(--timberwolf); */
+  display: grid;
+  grid-template-areas:
+    "P1 P1 P2 P2"
+    "P3 P3 P4 P4"
+    "P5 P5 P6 P6";
+  column-gap: 20px;
+  row-gap: 50px;
+  margin: 0 50px 0 50px;
+}
+#project-1 {
+  grid-area: P1;
+  display: flex;
+}
+#project-2 {
+  grid-area: P2;
+  display: flex;
+}
+#project-3 {
+  grid-area: P3;
+  display: flex;
+}
+#project-4 {
+  grid-area: P4;
+  display: flex;
+}
+#project-5 {
+  grid-area: P5;
+  display: flex;
+}
+#project-6 {
+  grid-area: P6;
+  display: flex;
+}
+p {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.description {
+  background-color: var(--azul);
+  /* color: var(--timberwolf); */
+}
+.description h2 {
+  padding: 10px;
+  color: var(--ghost-white);
+}
+/* -------MORE STYLES------- */
+.more {
+  grid-area: M;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more a {
+  font-size: 2.5rem;
+  padding: 20px 50px;
+  text-decoration: none;
+  background-color: var(--timberwolf);
+  border: 3px solid var(--jet);
+  border-radius: 20px;
+  color: var(--azul);
+}
+/* -------ABOUT ME STYLES------- */
+#about-container {
+  grid-area: AM;
+  display: flex;
+  column-gap: 50px;
+  padding-right: 50px;
+  background-color: var(--timberwolf);
+}
+#my-picture {
+  max-width: 200px;
+  border-radius: 50%;
+}
+#identity {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  text-align: center;
+  margin: 50px;
+}
+#profile {
+  padding: 30px;
+}
+#my-profile {
+  font-size: 1.5rem;
+}
+
+/* -------CONTACT ME STYLES------- */
+#contact-me {
+  grid-area: CM;
+  background-color: var(--apple-green);
+  height: 200px;
+}
+#contact-me ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+}
+#contact-me ul li a {
+  width: 200px;
+  padding: 100px;
+}
+
+.socials {
+  max-width: 50px;
+  transform: scale(3);
+}
+.socials-plus {
+  width: 36.75px;
+}
+/* -------FOOTER STYLES------- */
+#footer {
+  display: flex;
+  background-color: var(--jet);
+  height: 200px;
+  color: var(--ghost-white);
+  gap: 100px;
+  align-items: center;
+}
+.fcc-logo {
+  max-width: 50px;
+}
+#address {
+  line-height: 5px;
+}
+
+.phone {
+  line-height: 10px;
+}
+.free-code-camp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
